@@ -39,9 +39,9 @@
 
                 <div class="mt-4">
                     <div class="d-flex justify-content-center links">
-                        Don't have an account? <a href="{{ route('user.them') }}" class="ml-2">Sign Up</a>
+                        Chưa có tài khoản? <a href="{{ route('user.them') }}" class="ml-2">Đăng kí</a>
                     </div>
-                    <div class="d-flex justify-content-center links">Keep shopping?
+                    <div class="d-flex justify-content-center links">Tiếp tục mua sắm
                         <a class="ml-2" href="/" >Home page</a>
                     </div>
                     {{-- <div class="d-flex justify-content-center links">

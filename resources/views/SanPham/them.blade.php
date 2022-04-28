@@ -22,7 +22,7 @@
                     displayColumn="tendong" />
                 {{-- Hoặc --}}
                 {{-- <x-danh-muc-component name="id_danhmuc" label="Danh mục sản phẩm" /> --}}
-                <x-input name="hinhanh" label="Hình ảnh" type="file" />
+                <x-input name="hinhanh" label="Hình ảnh" type="file" multiple />
                 <x-input name="gia" label="Giá sản phẩm" />
                 <x-input name="soluong" label="Số lượng" />
                 <x-input name="mota" label="Mô tả" />

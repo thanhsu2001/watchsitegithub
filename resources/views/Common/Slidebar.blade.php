@@ -34,7 +34,7 @@ $urls = [['list', 'Danh sách']];
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        Interface
+        Quản trị
     </div>
 
     <!-- Nav Item - Pages Collapse Menu -->
@@ -60,7 +60,7 @@ $urls = [['list', 'Danh sách']];
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
             aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-fw fa-wrench"></i>
-            <span>Quản trị trang</span>
+            <span>Danh sách trang</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
             data-parent="#accordionSidebar">
@@ -70,7 +70,6 @@ $urls = [['list', 'Danh sách']];
                 <a class="collapse-item" href="{{ route('dongsp.danhsach') }}">Dòng sản phẩm</a>
                 <a class="collapse-item" href="{{ route('sanpham.danhsach') }}">Sản phẩm</a>
                 <a class="collapse-item" href="{{ route('phukien.danhsach') }}">Phụ kiện</a>
-                <a class="collapse-item" href="">Tài khoản người dùng</a>
                 <a class="collapse-item" href="{{route('client.contact.message')}}">Lời nhắn từ người dùng</a>
             </div>
         </div>

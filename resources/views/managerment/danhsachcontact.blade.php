@@ -2,13 +2,12 @@
 
     <p class="text-center display-2">
         Khách hàng liên hệ
-    </p>
-    <a class="btn btn-success" type="button" href="{{ route('dongsp.them') }}">Thêm</a>
+    </p>    
     <table class="table table-bordered">
         <tbody>
             <tr style="background-color: black;color:white">
                 {{-- <td>#</td> --}}
-                <td style="width: 200px;text-align:center;">Tên</td>
+                <td style="width: 200px;text-align:center;">Tên khách hàng</td>
                 <td style="width: 300px">
                     Email
                 </td>

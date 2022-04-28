@@ -8,6 +8,7 @@ use App\Http\Controllers\SanPhamController;
 use App\Http\Controllers\PhuKienController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\DB;
 
 Route::get('/', function () {
@@ -57,7 +58,7 @@ Route::prefix("/dong-san-pham")->middleware(["auth", "admin"])->namespace("App\H
     Route::get("/xoa/{id}", [DongSanPhamController::class, 'xoa'])
         ->name('dongsp.xoa');
 });
-Route::prefix("/user")->middleware(["auth", "admin"])->namespace("App\Http\Controllers")->group(function () {
+Route::prefix("/user")/*->middleware(["auth", "admin"])*/->namespace("App\Http\Controllers")->group(function () {
 
     Route::get('/addUser', [UserController::class, 'createUser'])->name('user.them');
 
@@ -67,6 +68,10 @@ Route::prefix("/user")->middleware(["auth", "admin"])->namespace("App\Http\Contr
 
     Route::get("/xoa/{id}", [UserController::class, 'xoa'])
         ->name('user.xoa');
+
+    Route::get('/addinfouser', [UserController::class, 'themthongtin'])->name('user.themthongtin');
+
+    Route::post('/saveinfouser', [UserController::class, 'luuthongtin'])->name('user.luuthongtin');
 
     // Route::get('/infoUser',[UserController::class,'chitiet'])->name('user.info');
 });
@@ -153,24 +158,29 @@ Route::prefix("/client")->namespace("App\Http\Controllers")->group(function () {
         ->name('client.chitietphukien');
 });
 
-Route::prefix("/khach-hang")->middleware(["auth"])->namespace("App\Http\Controllers")->group(function(){
+Route::prefix("/khach-hang")->middleware(["auth"])->namespace("App\Http\Controllers")->group(function () {
 
     Route::get("/danh-sach", 'KhachHangController@danhsach')
-    ->name('khachhang.danhsach');
+        ->name('khachhang.danhsach');
 
     Route::get("/{id}/chi-tiet", [KhachHangController::class, 'chitiet'])
-    ->name('khachhang.chitiet');
+        ->name('khachhang.chitiet');
 
     Route::get("/them", [KhachHangController::class, 'them'])
-    ->name('khachhang.them');
+        ->name('khachhang.them');
 
     Route::post("/luu/{id?}", [KhachHangController::class, 'luu'])
-    ->name('khachhang.luu');
+        ->name('khachhang.luu');
 
     Route::get("/sua/{id}", [KhachHangController::class, 'sua'])
-    ->name('khachhang.sua');
+        ->name('khachhang.sua');
 
     Route::get("/xoa/{id}", [KhachHangController::class, 'xoa'])
-    ->name('khachhang.xoa');
-
+        ->name('khachhang.xoa');
 });
+Route::get('/cart', function () {
+    return view('cart');
+})->name('cart');
+Route::get('/hoadon', function () {
+    return view('hoadon');
+})->name('hoadon');

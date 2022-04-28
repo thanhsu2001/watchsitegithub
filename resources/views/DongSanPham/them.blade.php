@@ -19,8 +19,7 @@
                 {{-- <x-danh-muc-component name="id_danhmuc" label="Danh mục sản phẩm" /> --}}
                 <x-input name="hinhanh" label="Hình ảnh" type="file" />
 
-                <x-mst-select name="id_danhmuc" label="Thuộc danh mục: "
-                        table="danh_mucs" displayColumn="tendanhmuc" />
+                
                         
                 <x-input name="mota" label="Mô tả" />
                 <div class="form-group mt-3">

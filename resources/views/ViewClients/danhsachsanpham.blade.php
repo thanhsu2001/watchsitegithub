@@ -48,8 +48,7 @@
                                         <h6>
                                             Giá:
                                             <span>
-                                                {{ $item->gia }}
-                                            </span>
+                                                {{ number_format((float)$item->gia)  }} <u>vnđ</u>                                            </span>
                                         </h6>
                                     </div>
                                     <div class="new">

@@ -1,6 +1,6 @@
 <x-layout title="Thêm danh mục sản phẩm">
     <p class="text-center display-2">
-        Đây là trang thêm danh mục sản phẩm
+        Thêm danh mục sản phẩm
     </p>
     
     <div class="row">

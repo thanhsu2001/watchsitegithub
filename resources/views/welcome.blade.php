@@ -39,7 +39,7 @@
                                         </p>
                                         <div class="btn-box">
                                             <a href="{{ route('client.contact') }}" class="btn1">
-                                                Liên hệ với chúng tôi
+                                                Liên hệ ngay
                                             </a>
                                         </div>
                                     </div>

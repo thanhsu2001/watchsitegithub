@@ -2,7 +2,7 @@
 
 
     <p class="text-center display-2">
-        Trang sửa dòng sản phẩm
+        Sửa dòng sản phẩm
     </p>
 
     <div class="row">
@@ -20,6 +20,8 @@
                 <x-input name="tendong" label="Tên dòng sản phẩm" value="{{ $dongsanpham->tendong ?? '' }}" />
 
                 <x-input name="hinhanh" label="Hình ảnh" type="file" />
+                <x-mst-select value="{{$dongsanpham->id_danhmuc}}" name="id_danhmuc" label="Thuộc danh mục: "
+                        table="danh_mucs" displayColumn="tendanhmuc" />
 
                 <x-input name="mota" label="Mô tả" value="{{ $dongsanpham->mota ?? '' }}" />
 

@@ -2,7 +2,7 @@
 
 
     <p class="text-center display-2">
-        Đây là trang sửa
+        Sửa danh mục sản phẩm
     </p>
 
     <div class="row">

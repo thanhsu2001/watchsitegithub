@@ -3,6 +3,7 @@
     $_label = $attributes['label'];
     $_type = $attributes['type'] ?? 'text';
     $_old_value = old($_name);
+    $_multi_pic = $attributes['multiple'];
 
     $_value = $attributes['value'] ?? "";
     $_value = empty($_old_value) ? $_value : $_old_value;
@@ -11,7 +12,7 @@
 <div class="form-group mt-3">
     <label for="{{ $_name }}" class="form-label">{{ $_label }}</label>
     <input id="{{ $_name }}" name="{{ $_name }}" type="{{ $_type }}" value="{{ $_value }}"
-        class="form-control @error($_name) is-invalid @enderror" />
+        class="form-control @error($_name) is-invalid @enderror"  {{isset($_multi_pic)==null?'' : 'multiple'}} />
 
     {{-- Thông báo lỗi xác thực dữ liệu --}}
     @error($_name)

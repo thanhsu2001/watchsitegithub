@@ -12,10 +12,14 @@
 
     <select id="{{ $_name }}" name="{{ $_name }}"
             class="form-select @error($_name) is-invalid @enderror">
-        <option value="">-- Chọn 1 giá trị --</option>
-        @foreach ($data as $item)
+            <option value="">-- Chọn 1 giá trị --</option>
+            @foreach ($data as $item)
+            @if ($_value == $item->id)
+            <option value="{{ $item->id }}" selected>{{ $item->$displayColumn }}</option>
+            @else
             <option value="{{ $item->id }}">{{ $item->$displayColumn }}</option>
-        @endforeach
+            @endif
+            @endforeach
 
     </select>
 

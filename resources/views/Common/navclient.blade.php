@@ -1,3 +1,4 @@
+
 <header class="header_section">
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
@@ -76,6 +77,9 @@
                                 </form>
                             </div>
                         </li>
+                        <a href="{{route('cart')}}">
+                            <i class="fas fa-cart-plus"></i>
+                        </a>
                         @if (Auth::user())
                             <li class="nav-item dropdown no-arrow">
                                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
@@ -89,6 +93,11 @@
                                 <!-- Dropdown - User Information -->
                                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                     aria-labelledby="userDropdown">
+                                    @if (Auth::user()->is_admin)
+                                        <a class="dropdown-item">
+                                            Bạn là quản trị viên
+                                        </a>
+                                    @endif
                                     <a class="dropdown-item" href="#">
                                         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                         Cá nhân
@@ -114,7 +123,7 @@
                             <li class="nav-item dropdown no-arrow">
                                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">My account</span>
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Tài khoản</span>
                                 </a>
                                 <!-- Dropdown - User Information -->
                                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -130,7 +139,6 @@
                                 </div>
                             </li>
                         @endif
-
                     </ul>
 
                 </nav>
@@ -138,3 +146,5 @@
         </nav>
     </div>
 </header>
+<link rel="stylesheet" href="/css/bootstrap.css">
+

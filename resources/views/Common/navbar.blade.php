@@ -1,13 +1,3 @@
-@php
-function isActive($routeName)
-{
-    if (Route::current()->getName() == $routeName) {
-        return 'text-primary';
-    }
-}
-$urls = [['list', 'Danh sách']];
-@endphp
-
 <!-- Page Wrapper -->
 <div id="wrapper">
 
@@ -203,11 +193,11 @@ $urls = [['list', 'Danh sách']];
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
+                                    Thông tin
                                 </a>
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Managerment
+                                    Quản trị
                                 </a>
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -216,7 +206,7 @@ $urls = [['list', 'Danh sách']];
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{ route('user.logout') }}">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                    Đăng xuất
                                 </a>
                             </div>
                         </li>
@@ -240,7 +230,7 @@ $urls = [['list', 'Danh sách']];
                             </div>
                         </li>
                     @endif
-
+                        
                 </ul>
 
             </nav>
@@ -298,8 +288,8 @@ $urls = [['list', 'Danh sách']];
             </div>
             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
             <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="login.html">Logout</a>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Huỷ</button>
+                <a class="btn btn-primary" href="login.html">Đăng xuất</a>
             </div>
         </div>
     </div>

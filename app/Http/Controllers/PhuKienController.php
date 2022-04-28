@@ -111,7 +111,6 @@ class PhuKienController extends Controller
 			"tenphukien" 	=> ["required", "max:255"],	// bắt buộc, tối đa 2255 ký tự
 			"hinhanh"		=> ["nullable", "image", "max:5000"],	// không bắt buộc, là ảnh, tối đa 500 KB
 			"gia" 	=> ["required", "max:255"],	// bắt buộc, tối đa 2255 ký tự
-			"mota" 			=> "required|max:2555",	// bắt buộc, tối đa 255 ký tự
 		];
 
 		$fields = [
@@ -120,7 +119,6 @@ class PhuKienController extends Controller
 			"hinhanh" => "Hình ảnh",
 			"gia" => "Giá",
 			"soluong" => "Số lượng",
-			"mota" => "Mô tả",
 		];
 
 		$validator = Validator::make($data, $rules, [], $fields);

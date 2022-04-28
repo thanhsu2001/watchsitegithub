@@ -16,7 +16,7 @@
           <div class="detail-box">
             <div class="heading_container">
               <h2>
-                About Us
+                Về chúng tôi
               </h2>
             </div>
             <p>

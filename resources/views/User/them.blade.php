@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-center form_container">
-                    <form action="{{ route('user.loginuser') }}" method="post" autocomplete="off">
+                    <form action="{{ route('user.save') }}" method="post" autocomplete="off">
                         @csrf
                         <x-input name="email" type="email" label="Email" />
                         <x-input name="name" type="text" label="Họ tên" />

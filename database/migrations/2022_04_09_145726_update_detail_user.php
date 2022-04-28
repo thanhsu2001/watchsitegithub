@@ -14,10 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table()->string('hoten')->nullable();
-            $table()->string('diachi')->nullable();
-            $table()->bigInteger('phone')->nullable();
-            $table()->boolean('sex')->nullable();
+            // $table()->string('hoten')->nullable();
+            // $table()->string('avatar')->nullable();
+            // $table()->string('diachi')->nullable();
+            // $table()->bigInteger('phone')->nullable();
+            // $table()->boolean('sex')->nullable();
         });
     }
 
@@ -29,10 +30,11 @@ return new class extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table()->dropColumn('hoten');
-            $table()->dropColumn('phone');
-            $table()->dropColumn('diachi');
-            $table()->dropColumn('sex');
+            // $table()->dropColumn('hoten');
+            // $table()->dropColumn('avatar');
+            // $table()->dropColumn('phone');
+            // $table()->dropColumn('diachi');
+            // $table()->dropColumn('sex');
         });
     }
 };
